@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+
+    <script>
+
+    var socket = io();
+
+    socket.on('data', function(data) {
+        console.log(data);
+        document.getElementById('samp').style.opacity = data+"%"; 
+    });
+
+    </script>
+
+    <style>
+
+      #sample {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+      }
+
+    </style>
+
+<style>
+
+  #samp {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+  }
+
+</style>
+
+  </head>
+  <body>
+
+    <h1>Shomari from an Arduino to Node.js</h1>
+    <div id="samp"></div>
+
+  </body>
+</html>
